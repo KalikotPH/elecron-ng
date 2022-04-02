@@ -1,21 +1,7 @@
 {
-  "name": "@initappz/admin",
+  "name": "@bytescrafter/brilliant-admin",
   "version": "1.0.0",
-  "description": "initappz admin panel",
-  "author": {
-    "name": "Łukasz Holeczek",
-    "url": "http://holeczek.pl",
-    "github": "https://github.com/mrholek",
-    "twitter": "https://twitter.com/lukaszholeczek"
-  },
-  "contributors": [
-    {
-      "name": "Andrzej Kopański",
-      "url": "https://github.com/xidedix"
-    }
-  ],
-  "homepage": "https://coreui.io/angular",
-  "copyright": "Copyright 2021 creativeLabs Łukasz Holeczek",
+  "description": "Admini panel for managing Virtual ID.",
   "license": "MIT",
   "scripts": {
     "ng": "ng",

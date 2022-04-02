@@ -1,11 +1,4 @@
-<!--
-  Authors : initappz (Rahul Jograna)
-  Website : https://initappz.com/
-  App Name : Grocery Delivery App
-  This App Template Source code is licensed as per the
-  terms found in the Website https://initappz.com/license
-  Copyright and Good Faith Purchasers © 2021-present initappz.
- -->
+<!-- BytesCrafter  -->
 <ngx-spinner></ngx-spinner>
 <div class="animated fadeIn">
   <div class="row">
@@ -14,7 +7,7 @@
         <div class="card-body pb-2">
 
           <div class="text-value">{{order}} </div>
-          <div> {{util.translate('Total Orders')}} </div>
+          <div> {{util.translate('Total Cards')}} </div>
         </div>
       </div>
     </div>
@@ -24,7 +17,7 @@
         <div class="card-body pb-2">
 
           <div class="text-value">{{users}} </div>
-          <div>{{util.translate('Total Users')}} </div>
+          <div>{{util.translate('Total Stores')}} </div>
         </div>
 
       </div>
@@ -35,7 +28,7 @@
         <div class="card-body pb-2">
 
           <div class="text-value">{{stores}} </div>
-          <div>{{util.translate('Total Stores')}} </div>
+          <div>{{util.translate('Authorized Resellers')}} </div>
         </div>
 
       </div>
@@ -46,7 +39,7 @@
         <div class="card-body pb-2">
 
           <div class="text-value">{{products}} </div>
-          <div> {{util.translate('Total Products')}} </div>
+          <div> {{util.translate('Franchisee/Distributor')}} </div>
         </div>
 
       </div>
@@ -62,7 +55,7 @@
         <div class="card-body">
           <div class="row">
             <div class="col-sm-12">
-              <h4 class="card-title mb-0">{{util.translate('Today Orders Stats')}} </h4>
+              <h4 class="card-title mb-0">{{util.translate('Today Application')}} </h4>
               <div class="small text-muted">{{labelToday}}</div>
             </div>
           </div>
@@ -84,7 +77,7 @@
         <div class="card-body">
           <div class="row">
             <div class="col-sm-12">
-              <h4 class="card-title mb-0">{{util.translate('Weekly Orders Stats')}} </h4>
+              <h4 class="card-title mb-0">{{util.translate('Weekly Application')}} </h4>
               <div class="small text-muted">{{labelWeekly}}</div>
             </div>
           </div>
@@ -105,7 +98,7 @@
         <div class="card-body">
           <div class="row">
             <div class="col-sm-12">
-              <h4 class="card-title mb-0">{{util.translate('Monthly Orders Stats')}} </h4>
+              <h4 class="card-title mb-0">{{util.translate('Monthly Application')}} </h4>
               <div class="small text-muted">{{labelMonthly}}</div>
             </div>
           </div>
@@ -125,7 +118,7 @@
     <div class="col-md-12">
       <div class="card">
         <div class="card-header">
-          {{util.translate('Recent Orders')}}
+          {{util.translate('Recent Application')}}
         </div>
         <div class="card-body">
           <div *ngIf="!recentOrders?.length && dummy.length == 0" style="text-align: center;">
@@ -225,7 +218,7 @@
     <div class="col-md-12">
       <div class="card">
         <div class="card-header">
-          {{util.translate('This months complaints')}}
+          {{util.translate('Recent Stores')}}
         </div>
         <div class="card-body">
           <div *ngIf="!complaints?.length && dummy.length == 0" style="text-align: center;">

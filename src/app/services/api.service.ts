@@ -1,11 +1,4 @@
-/*
-  Authors : initappz (Rahul Jograna)
-  Website : https://initappz.com/
-  App Name : Grocery Delivery App
-  This App Template Source code is licensed as per the
-  terms found in the Website https://initappz.com/license
-  Copyright and Good Faith Purchasers © 2021-present initappz.
-*/
+/* BytesCrafter */
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { environment } from '../../environments/environment';
@@ -15,13 +8,13 @@ import { environment } from '../../environments/environment';
 })
 export class ApiService {
   baseUrl = environment.baseUrl;
-  imageUrl = environment.imageUrl;
-  videoUrl = environment.imageUrl;
+  imageUrl = "";
+  videoUrl = "";
 
   constructor(
     private http: HttpClient,
   ) {
-    console.log("URL = ", this.baseUrl);
+    //console.log("BaseURL: ", this.baseUrl);
   }
 
   uploadFile(files: File[]) {

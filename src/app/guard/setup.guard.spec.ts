@@ -1,16 +1,16 @@
 /* BytesCrafter */
 import { TestBed, async, inject } from '@angular/core/testing';
 
-import { AuthGuard } from './auth.guard';
+import { SetupAuthGuard } from './setup.guard';
 
 describe('AuthGuard', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
-      providers: [AuthGuard]
+      providers: [SetupAuthGuard]
     });
   });
 
-  it('should ...', inject([AuthGuard], (guard: AuthGuard) => {
+  it('should ...', inject([SetupAuthGuard], (guard: SetupAuthGuard) => {
     expect(guard).toBeTruthy();
   }));
 });

@@ -1,11 +1,4 @@
-/*
-  Authors : initappz (Rahul Jograna)
-  Website : https://initappz.com/
-  App Name : Grocery Delivery App
-  This App Template Source code is licensed as per the
-  terms found in the Website https://initappz.com/license
-  Copyright and Good Faith Purchasers © 2021-present initappz.
-*/
+/* BytesCrafter */
 // The file contents for the current environment will overwrite these during build.
 // The build system defaults to the dev environment which uses `environment.ts`, but if you do
 // `ng build --env=prod` then `environment.prod.ts` will be used instead.
@@ -13,6 +6,5 @@
 
 export const environment = {
   production: false,
-  baseUrl: 'http://127.0.0.1:8000/api/', // ex https://yourapi.com/public/api/ don't forgot to add public/api/ at the end
-  imageUrl: 'http://127.0.0.1:8000/storage/images/', // ex https://yourapi.com/public/storage/images/ don't forgot to add public/storage/images at the end
+  baseUrl: 'http://wordpress.dev/wp-json/', // ex https://yourapi.com/public/api/ don't forgot to add public/api/ at the end
 };

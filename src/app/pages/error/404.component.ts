@@ -1,18 +1,17 @@
-/*
-  Authors : initappz (Rahul Jograna)
-  Website : https://initappz.com/
-  App Name : Grocery Delivery App
-  This App Template Source code is licensed as per the
-  terms found in the Website https://initappz.com/license
-  Copyright and Good Faith Purchasers © 2021-present initappz.
-*/
+/* BytesCrafter */
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   templateUrl: '404.component.html'
 })
 export class P404Component {
 
-  constructor() { }
+  constructor(
+    private router: Router
+  ) { }
 
+  goBack() {
+    this.router.navigate(['/login']);
+  }
 }

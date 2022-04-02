@@ -1,11 +1,4 @@
-/*
-  Authors : initappz (Rahul Jograna)
-  Website : https://initappz.com/
-  App Name : Grocery Delivery App
-  This App Template Source code is licensed as per the
-  terms found in the Website https://initappz.com/license
-  Copyright and Good Faith Purchasers © 2021-present initappz.
-*/
+/* BytesCrafter */
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { LocationStrategy, HashLocationStrategy } from '@angular/common';
@@ -58,7 +51,6 @@ import { NgxSpinnerModule } from "ngx-spinner";
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 import { AuthGuard } from './guard/auth.guard';
-import { LeaveGuard } from './leaved/leaved.guard';
 
 @NgModule({
   imports: [
@@ -98,8 +90,7 @@ import { LeaveGuard } from './leaved/leaved.guard';
   ],
   providers: [
     IconSetService,
-    AuthGuard,
-    LeaveGuard
+    AuthGuard
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   bootstrap: [AppComponent]

@@ -1,11 +1,4 @@
-/*
-  Authors : initappz (Rahul Jograna)
-  Website : https://initappz.com/
-  App Name : Grocery Delivery App
-  This App Template Source code is licensed as per the
-  terms found in the Website https://initappz.com/license
-  Copyright and Good Faith Purchasers © 2021-present initappz.
-*/
+/* BytesCrafter */
 import { Injectable } from '@angular/core';
 import Swal from 'sweetalert2';
 import { NgxSpinnerService } from 'ngx-spinner';
@@ -36,9 +29,9 @@ export class UtilService {
       icon: 'icon-speedometer',
     },
     {
-      name: 'Cities',
-      url: '/cities',
-      icon: 'cil-location-pin'
+      name: 'Virtual ID',
+      url: '/products',
+      icon: 'cil-badge'
     },
     {
       name: 'Stores',
@@ -51,143 +44,24 @@ export class UtilService {
       icon: 'cil-people'
     },
     {
-      name: 'Drivers',
-      url: '/drivers',
-      icon: 'cil-bike'
-    },
-    {
-      name: 'Orders',
-      url: '/orders',
-      icon: 'cil-cart'
-    },
-    {
-      name: 'Categories',
-      url: '/categories',
-      icon: 'cil-grid'
-    },
-    {
-      name: 'Sub Categories',
-      url: '/sub-categories',
-      icon: 'cil-grain'
-    },
-    {
-      name: 'Products',
-      url: '/products',
-      icon: 'cil-apple'
-    },
-    {
-      name: 'Payments',
-      url: '/payments',
-      icon: 'cil-credit-card'
-    },
-    {
-      name: 'Referral',
-      url: '/referral',
-      icon: 'cil-tags'
-    },
-    {
       title: true,
       name: 'Manage'
-    },
-    {
-      name: 'Contact Forms',
-      url: '/contact-forms',
-      icon: 'cil-address-book'
-    },
-    {
-      name: 'Store Request',
-      url: '/store-request',
-      icon: 'cil-chevron-double-right'
-    },
-    {
-      name: 'Driver Request',
-      url: '/driver-request',
-      icon: 'cil-chevron-double-right'
-    },
-    {
-      name: 'Languages',
-      url: '/languages',
-      icon: 'cil-translate'
-    },
-    {
-      name: 'Banners',
-      url: '/banners',
-      icon: 'cil-barcode'
-    },
-    {
-      name: 'Offers',
-      url: '/offers',
-      icon: 'cil-badge'
-    },
-    {
-      name: 'Notifications',
-      url: '/notifications',
-      icon: 'cil-bell-exclamation'
     },
     {
       name: 'Send Mail',
       url: '/send-mail',
       icon: 'cil-address-book'
     },
-    {
-      name: 'Support',
-      url: '/supports',
-      icon: 'cil-info'
-    },
-    {
-      name: 'Stats',
-      url: '/stats',
-      icon: 'cil-chart-line'
-    },
-    {
-      name: 'Complaints',
-      url: '/complaints',
-      icon: 'cil-volume-high'
-    },
-    {
-      name: 'General',
-      url: '/general',
-      icon: 'cil-chevron-double-right'
-    },
+
     {
       name: 'Settings',
-      url: '/app-settings',
+      url: '/general',
       icon: 'cil-cog'
     },
     {
-      name: 'Pages',
-      url: '/pages',
-      icon: 'cil-clone'
-    },
-    {
-      name: 'Manage App',
-      url: '/manage-app',
-      icon: 'cil-lock-locked'
-    },
-    {
-      name: 'Manage Popup',
-      url: '/manage-popup',
-      icon: 'cil-library'
-    },
-    {
-      name: 'App Updates',
-      url: '/app-updates',
-      icon: 'cil-braille'
-    },
-    {
-      name: 'Administrator',
-      url: '/administrator',
-      icon: 'cil-line-weight'
-    },
-    {
-      name: 'Address',
-      url: '/address',
-      icon: 'cil-location-pin'
-    },
-    {
-      name: 'Buy Now',
-      url: 'https://codecanyon.net/user/initappz/portfolio',
-      icon: 'icon-layers',
+      name: 'GET SUPPORT',
+      url: 'mailto:cardmake@bytescrafter.net',
+      icon: 'cil-info',
       variant: 'danger',
       attributes: { target: '_blank', rel: 'noopener' }
     }

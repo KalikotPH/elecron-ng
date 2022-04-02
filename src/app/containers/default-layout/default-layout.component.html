@@ -1,11 +1,4 @@
-<!--
-  Authors : initappz (Rahul Jograna)
-  Website : https://initappz.com/
-  App Name : Grocery Delivery App
-  This App Template Source code is licensed as per the
-  terms found in the Website https://initappz.com/license
-  Copyright and Good Faith Purchasers © 2021-present initappz.
- -->
+<!-- BytesCrafter  -->
 <app-header [navbarBrandRouterLink]="['/dashboard']" [fixed]="true"
   [navbarBrandFull]="{src: 'assets/img/brand/big_logo.png', width: 89, height: 25, alt: 'Your Logo'}"
   [navbarBrandMinimized]="{src: 'assets/img/brand/tiny.png', width: 30, height: 30, alt: 'Your Logo'}"
@@ -19,8 +12,8 @@
         <i class="fa fa-user-circle-o fa-lg"></i>
       </a>
       <div class="dropdown-menu dropdown-menu-right" *dropdownMenu aria-labelledby="simple-dropdown">
-
-        <a class="dropdown-item" (click)="openSettings()"><i class="fa fa-wrench"></i> {{util.translate('Setting')}} </a>
+        <!-- <a class="dropdown-item" ><i class="fa fa-wrench"></i> {{util.translate('')}} </a>
+        <a class="dropdown-item" (click)="openSettings()"><i class="fa fa-wrench"></i> {{util.translate('Profile')}} </a> -->
         <a class="dropdown-item" (click)="logout()"><i class="fa fa-lock"></i> {{util.translate('Logout')}} </a>
       </div>
     </li>
@@ -42,6 +35,5 @@
 
 </div>
 <app-footer>
-  <span><a href="https://initappz.com/" target="_blank">initappz</a> &copy; {{currentYear}} initappz.</span>
-
+  <span>CardMake &copy; {{currentYear}}. All Rights Reserved. <a href="https://bytescrafter.net/" target="_blank">BytesCrafter</a></span>
 </app-footer>

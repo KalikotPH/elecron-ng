@@ -1,28 +1,21 @@
-/*
-  Authors : initappz (Rahul Jograna)
-  Website : https://initappz.com/
-  App Name : Grocery Delivery App
-  This App Template Source code is licensed as per the
-  terms found in the Website https://initappz.com/license
-  Copyright and Good Faith Purchasers © 2021-present initappz.
-*/
+/* BytesCrafter */
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 import { DefaultLayoutComponent } from './containers';
 import { AuthGuard } from './guard/auth.guard';
-import { LeaveGuard } from './leaved/leaved.guard';
 
 import { P404Component } from './pages/error/404.component';
 import { P500Component } from './pages/error/500.component';
 import { LoginComponent } from './pages/login/login.component';
 import { RegisterComponent } from './pages/register/register.component';
-import { SetupAuthGuard } from './setupGuard/auth.guard';
+import { SetupAuthGuard } from './guard/setup.guard';
+import { LoginGuard } from './guard/login.guard';
 
 export const routes: Routes = [
   {
     path: '',
-    redirectTo: 'dashboard',
+    redirectTo: 'login',
     pathMatch: 'full',
   },
   {
@@ -40,23 +33,24 @@ export const routes: Routes = [
     }
   },
   {
+    path: 'setup',
+    component: RegisterComponent,
+    data: {
+      title: 'Setup Page'
+    },
+    canActivate: [SetupAuthGuard]
+  },
+  {
     path: 'login',
     component: LoginComponent,
     data: {
       title: 'Login Page'
     },
-    canActivate: [SetupAuthGuard]
+    canActivate: [LoginGuard]
   },
   {
     path: 'forgot',
     loadChildren: () => import('./pages/forgot/forgot.module').then(m => m.ForgotModule),
-  },
-  {
-    path: 'setup',
-    component: RegisterComponent,
-    data: {
-      title: 'Register Page'
-    }
   },
   {
     path: '',
@@ -82,46 +76,9 @@ export const routes: Routes = [
         loadChildren: () => import('./pages/users/users.module').then(m => m.UsersModule),
         canActivate: [AuthGuard]
       },
-
-      {
-        path: 'languages',
-        loadChildren: () => import('./pages/languages/languages.module').then(m => m.LanguagesModule),
-        canActivate: [AuthGuard]
-      },
-      {
-        path: 'manage-languages',
-        loadChildren: () => import('./pages/manage-languages/manage-languages.module').then(m => m.ManageLanguagesModule),
-        canActivate: [AuthGuard]
-      },
-
-      {
-        path: 'app-settings',
-        loadChildren: () => import('./pages/app-settings/app-settings.module').then(m => m.AppSettingsModule),
-        canActivate: [AuthGuard]
-      },
-      {
-        path: 'banners',
-        loadChildren: () => import('./pages/banners/banners.module').then(m => m.BannersModule),
-        canActivate: [AuthGuard]
-      },
       {
         path: 'categories',
         loadChildren: () => import('./pages/categories/categories.module').then(m => m.CategoriesModule),
-        canActivate: [AuthGuard]
-      },
-      {
-        path: 'cities',
-        loadChildren: () => import('./pages/cities/cities.module').then(m => m.CitiesModule),
-        canActivate: [AuthGuard]
-      },
-      {
-        path: 'contacts',
-        loadChildren: () => import('./pages/contacts/contacts.module').then(m => m.ContactsModule),
-        canActivate: [AuthGuard]
-      },
-      {
-        path: 'drivers',
-        loadChildren: () => import('./pages/drivers/drivers.module').then(m => m.DriversModule),
         canActivate: [AuthGuard]
       },
       {
@@ -130,28 +87,8 @@ export const routes: Routes = [
         canActivate: [AuthGuard]
       },
       {
-        path: 'notifications',
-        loadChildren: () => import('./pages/notifications/notifications.module').then(m => m.NotificationsModule),
-        canActivate: [AuthGuard]
-      },
-      {
-        path: 'offers',
-        loadChildren: () => import('./pages/offers/offers.module').then(m => m.OffersModule),
-        canActivate: [AuthGuard]
-      },
-      {
         path: 'orders',
         loadChildren: () => import('./pages/orders/orders.module').then(m => m.OrdersModule),
-        canActivate: [AuthGuard]
-      },
-      {
-        path: 'pages',
-        loadChildren: () => import('./pages/pages/pages.module').then(m => m.PagesModule),
-        canActivate: [AuthGuard]
-      },
-      {
-        path: 'payments',
-        loadChildren: () => import('./pages/payments/payments.module').then(m => m.PaymentsModule),
         canActivate: [AuthGuard]
       },
       {
@@ -165,84 +102,13 @@ export const routes: Routes = [
         canActivate: [AuthGuard]
       },
       {
-        path: 'sub-categories',
-        loadChildren: () => import('./pages/sub-categories/sub-categories.module').then(m => m.SubCategoriesModule),
-        canActivate: [AuthGuard]
-      },
-      {
-        path: 'supports',
-        loadChildren: () => import('./pages/support/support.module').then(m => m.SupportModule),
-        canActivate: [AuthGuard],
-        canDeactivate: [LeaveGuard]
-      },
-      {
-        path: 'administrator',
-        loadChildren: () => import('./pages/administrantor/administrantor.module').then(m => m.AdministrantorModule),
-        canActivate: [AuthGuard]
-      },
-      {
-        path: 'manage-app',
-        loadChildren: () => import('./pages/manage-app/manage-app.module').then(m => m.ManageAppModule),
-        canActivate: [AuthGuard]
-      },
-      {
-        path: 'manage-popup',
-        loadChildren: () => import('./pages/manage-popup/manage-popup.module').then(m => m.ManagePopupModule),
-        canActivate: [AuthGuard]
-      },
-      {
         path: 'send-mail',
         loadChildren: () => import('./pages/send-mail/send-mail.module').then(m => m.SendMailModule),
         canActivate: [AuthGuard]
       },
       {
-        path: 'address',
-        loadChildren: () => import('./pages/address/address.module').then(m => m.AddressModule),
-        canActivate: [AuthGuard]
-      },
-      {
-        path: 'referral',
-        loadChildren: () => import('./pages/referral/referral.module').then(m => m.ReferralModule),
-        canActivate: [AuthGuard]
-      },
-      {
-        path: 'contact-forms',
-        loadChildren: () => import('./pages/contact-forms/contact-forms.module').then(m => m.ContactFormsModule),
-        canActivate: [AuthGuard]
-      },
-      {
         path: 'manage-store',
         loadChildren: () => import('./pages/manage-store/manage-store.module').then(m => m.ManageStoreModule),
-        canActivate: [AuthGuard]
-      },
-      {
-        path: 'store-request',
-        loadChildren: () => import('./pages/store-request/store-request.module').then(m => m.StoreRequestModule),
-        canActivate: [AuthGuard]
-      },
-      {
-        path: 'complaints',
-        loadChildren: () => import('./pages/complaints/complaints.module').then(m => m.ComplaintsModule),
-        canActivate: [AuthGuard]
-      },
-      {
-        path: 'driver-request',
-        loadChildren: () => import('./pages/driver-request/driver-request.module').then(m => m.DriverRequestModule),
-        canActivate: [AuthGuard]
-      },
-      {
-        path: 'stats',
-        loadChildren: () => import('./pages/stats/stats.module').then(m => m.StatsModule),
-        canActivate: [AuthGuard]
-      },
-      {
-        path: 'order-details',
-        loadChildren: () => import('./pages/order-details/order-details.module').then(m => m.OrderDetailsModule),
-        canActivate: [AuthGuard]
-      },
-      {
-        path: 'app-updates',
-        loadChildren: () => import('./pages/app-updates/app-updates.module').then(m => m.AppUpdatesModule),
         canActivate: [AuthGuard]
       }
     ]
