@@ -12,15 +12,15 @@ export class LoginGuard implements CanActivate {
     private router: Router) { }
 
   canActivate(route: ActivatedRouteSnapshot): any {
-    return this.api.get_public('cardmake/v1/plugin/init')
+    return this.api.posts('cardmake/v1/user/refresh', {})
       .then((response: any) => {
         if (response && response.success) {
-          return true;
+          this.router.navigate(['/dashboard']);
         } else {
-          this.router.navigate(['/setup']);
+          return true;
         }
       }).catch(error => {
-        this.router.navigate(['/500']);
+        this.router.navigate(['/setup']);
       });
 
     return true;

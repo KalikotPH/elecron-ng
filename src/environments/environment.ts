@@ -6,5 +6,5 @@
 
 export const environment = {
   production: false,
-  baseUrl: 'http://wordpress.dev/wp-json/', // ex https://yourapi.com/public/api/ don't forgot to add public/api/ at the end
+  baseUrl: 'https://wordpress.dev/wp-json/', // ex https://yourapi.com/public/api/ don't forgot to add public/api/ at the end
 };

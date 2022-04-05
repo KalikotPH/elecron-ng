@@ -32,22 +32,24 @@ export class DefaultLayoutComponent {
   }
 
   logout() {
-    this.util.show();
-    this.api.post_private('v1/auth/logout', {}).then((data) => {
-      this.util.hide();
-      console.log(data);
-      localStorage.removeItem('uid');
-      localStorage.removeItem('token');
-      this.router.navigateByUrl('login');
-    }, error => {
-      this.util.hide();
-      console.log(error);
-      this.util.apiErrorHandler(error);
-    }).catch(error => {
-      this.util.hide();
-      console.log(error);
-      this.util.apiErrorHandler(error);
-    });
+    localStorage.clear();
+    this.router.navigateByUrl('login');
+    //this.util.show();
+    // this.api.post_private('v1/auth/logout', {}).then((data) => {
+    //   this.util.hide();
+    //   console.log(data);
+    //   localStorage.removeItem('uid');
+    //   localStorage.removeItem('token');
+    //   this.router.navigateByUrl('login');
+    // }, error => {
+    //   this.util.hide();
+    //   console.log(error);
+    //   this.util.apiErrorHandler(error);
+    // }).catch(error => {
+    //   this.util.hide();
+    //   console.log(error);
+    //   this.util.apiErrorHandler(error);
+    // });
   }
 
   openSettings() {

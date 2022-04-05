@@ -66,6 +66,22 @@ export class ApiService {
     });
   }
 
+  public posts(url, body): Promise<any> {
+    return new Promise<any>((resolve, reject) => {
+      const header = {
+        headers: new HttpHeaders()
+          .set('Content-Type', 'application/x-www-form-urlencoded')
+          .set('Basic', `mobile`)
+      };
+      const param = this.JSON_to_URLEncoded(body);
+      this.http.post(this.baseUrl + url, param, header).subscribe((data) => {
+        resolve(data);
+      }, error => {
+        resolve(error);
+      });
+    });
+  }
+
   public post(url, body) {
     return new Promise((resolve, reject) => {
       const header = {
@@ -89,8 +105,8 @@ export class ApiService {
           .set('Content-Type', 'application/x-www-form-urlencoded')
           .set('Authorization', `Bearer ${localStorage.getItem('token')}`)
       };
+
       const param = this.JSON_to_URLEncoded(body);
-      console.log(param);
       this.http.post(this.baseUrl + url, param, header).subscribe((data) => {
         resolve(data);
       }, error => {
